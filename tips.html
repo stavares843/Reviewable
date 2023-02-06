@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tips and Tricks - Reviewable User Manual</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" type="image/png" href="https://reviewable.io/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="https://reviewable.io/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="https://reviewable.io/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="https://reviewable.io/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="https://reviewable.io/favicon-32x32.png" sizes="32x32">
+
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        <script>
+            var hash = window.location.hash;
+            if (hash.startsWith("#/")) { // Old SPA style link.  Identify redirect.
+                var hashMap = {
+                    "#/": "introduction.html",
+                    "#/?id=help-on-using-reviewable": "introduction.html#help-on-using-reviewable",
+                    "#/?id=how-to-use-this-guide": "introduction.html#how-to-use-this-guide",
+                    "#/?id=introduction": "introduction.html#introduction",
+                    "#/?id=staying-up-to-date": "introduction.html#staying-up-to-date",
+                    "#/abnormal": "abnormal.html",
+                    "#/abnormal?id=abnormal-conditions": "abnormal.html#abnormal-conditions",
+                    "#/abnormal?id=crash": "abnormal.html#crash",
+                    "#/abnormal?id=firebase-connection-trouble": "abnormal.html#firebase-connection-trouble",
+                    "#/abnormal?id=forced-upgrade": "abnormal.html#forced-upgrade",
+                    "#/abnormal?id=github-status": "abnormal.html#github-status",
+                    "#/accountsettings": "accountsettings.html",
+                    "#/accountsettings?id=account-settings": "accountsettings.html#account-settings",
+                    "#/accountsettings?id=adjust-contrast": "accountsettings.html#adjust-contrast",
+                    "#/accountsettings?id=custom-diff-font": "accountsettings.html#custom-diff-font",
+                    "#/accountsettings?id=custom-key-bindings": "accountsettings.html#custom-key-bindings",
+                    "#/accountsettings?id=custom-stylesheet": "accountsettings.html#custom-stylesheet",
+                    "#/accountsettings?id=github-authorizations-granted": "accountsettings.html#github-authorizations-granted",
+                    "#/accountsettings?id=line-link-template": "accountsettings.html#line-link-template",
+                    "#/dashboard": "dashboard.html",
+                    "#/dashboard?id=filter-reviews": "dashboard.html#filter-reviews",
+                    "#/dashboard?id=open-review": "dashboard.html#open-review",
+                    "#/dashboard?id=other-toggles": "dashboard.html#other-toggles",
+                    "#/dashboard?id=review-state": "dashboard.html#review-state",
+                    "#/dashboard?id=reviews-dashboard": "dashboard.html#reviews-dashboard",
+                    "#/discussions": "discussions.html",
+                    "#/discussions?id=change-disposition": "discussions.html#change-disposition",
+                    "#/discussions?id=checking-and-changing-dispositions": "discussions.html#checking-and-changing-dispositions",
+                    "#/discussions?id=code-review-discussions": "discussions.html#code-review-discussions",
+                    "#/discussions?id=dispositions": "discussions.html#dispositions",
+                    "#/discussions?id=dispositions-and-resolution": "discussions.html#dispositions-and-resolution",
+                    "#/discussions?id=ending-a-discussion": "discussions.html#ending-a-discussion",
+                    "#/discussions?id=inline-directives": "discussions.html#inline-directives",
+                    "#/discussions?id=new-and-old-comments": "discussions.html#new-and-old-comments",
+                    "#/discussions?id=replying-to-a-discussion": "discussions.html#replying-to-a-discussion",
+                    "#/discussions?id=replying-via-email-or-on-github": "discussions.html#replying-via-email-or-on-github",
+                    "#/discussions?id=resolution-workflows": "discussions.html#resolution-workflows",
+                    "#/discussions?id=starting-a-new-discussion": "discussions.html#starting-a-new-discussion",
+                    "#/discussions?id=unreplied-discussions": "discussions.html#unreplied-discussions",
+                    "#/files": "files.html",
+                    "#/files?id=code-review-files": "files.html#code-review-files",
+                    "#/files?id=collapsed-sections": "files.html#collapsed-sections",
+                    "#/files?id=column-headings": "files.html#column-headings",
+                    "#/files?id=diff-customization": "files.html#diff-customization",
+                    "#/files?id=diff-layout": "files.html#diff-layout",
+                    "#/files?id=diff-suppressing-states": "files.html#diff-suppressing-states",
+                    "#/files?id=diff-suppression-and-file-type": "files.html#diff-suppression-and-file-type",
+                    "#/files?id=file-contents": "files.html#file-contents",
+                    "#/files?id=file-diff": "files.html#file-diff",
+                    "#/files?id=file-header": "files.html#file-header",
+                    "#/files?id=file-list": "files.html#file-list",
+                    "#/files?id=file-matrix": "files.html#file-matrix",
+                    "#/files?id=forked-repos-tracking-upstream-changes": "files.html#forked-repos-tracking-upstream-changes",
+                    "#/files?id=generated-files": "files.html#generated-files",
+                    "#/files?id=line-discussion": "files.html#line-discussion",
+                    "#/files?id=mark-reviewed": "files.html#mark-reviewed",
+                    "#/files?id=rebasing": "files.html#rebasing",
+                    "#/files?id=revision-cells": "files.html#revision-cells",
+                    "#/files?id=single-file-mode": "files.html#single-file-mode",
+                    "#/files?id=special-states": "files.html#special-states",
+                    "#/files?id=support-for-specific-workflows": "files.html#support-for-specific-workflows",
+                    "#/registration": "registration.html",
+                    "#/registration?id=authorization-scopes": "registration.html#authorization-scopes",
+                    "#/registration?id=github-authorizations": "registration.html#github-authorizations",
+                    "#/registration?id=oauth-restrictions": "registration.html#oauth-restrictions",
+                    "#/registration?id=registration-and-github-authorization": "registration.html#registration-and-github-authorization",
+                    "#/registration?id=subscribing-organizations-member-sign-up": "registration.html#subscribing-organizations-member-sign-up",
+                    "#/registration?id=subscriptions": "registration.html#subscriptions",
+                    "#/repositories": "repositories.html",
+                    "#/repositories?id=approve-button-output": "repositories.html#approve-button-output",
+                    "#/repositories?id=completion-condition": "repositories.html#completion-condition",
+                    "#/repositories?id=condition-output": "repositories.html#condition-output",
+                    "#/repositories?id=connecting-repositories": "repositories.html#connecting-repositories",
+                    "#/repositories?id=create-reviews-for-your-own-prs": "repositories.html#create-reviews-for-your-own-prs",
+                    "#/repositories?id=current-and-future": "repositories.html#current-and-future",
+                    "#/repositories?id=default-review-style": "repositories.html#default-review-style",
+                    "#/repositories?id=development-environment": "repositories.html#development-environment",
+                    "#/repositories?id=discussion-participant-dismissers": "repositories.html#discussion-participant-dismissers",
+                    "#/repositories?id=prototype-repo": "repositories.html#prototype-repo",
+                    "#/repositories?id=repo-settings": "repositories.html#repo-settings",
+                    "#/repositories?id=repositories": "repositories.html#repositories",
+                    "#/repositories?id=review-state-input": "repositories.html#review-state-input",
+                    "#/repositories?id=review-status-in-github-pr": "repositories.html#review-status-in-github-pr",
+                    "#/repositories?id=reviewable-badge": "repositories.html#reviewable-badge",
+                    "#/repositories?id=reviews-in-connected-vs-unconnected-repos": "repositories.html#reviews-in-connected-vs-unconnected-repos",
+                    "#/repositories?id=security-concerns": "repositories.html#security-concerns",
+                    "#/reviews": "reviews.html",
+                    "#/reviews?id=approval-levels": "reviews.html#approval-levels",
+                    "#/reviews?id=changes": "reviews.html#changes",
+                    "#/reviews?id=changes-commits": "reviews.html#changes-commits",
+                    "#/reviews?id=changes-summary": "reviews.html#changes-summary",
+                    "#/reviews?id=checks": "reviews.html#checks",
+                    "#/reviews?id=code-review": "reviews.html#code-review",
+                    "#/reviews?id=counters": "reviews.html#counters",
+                    "#/reviews?id=files": "reviews.html#files",
+                    "#/reviews?id=keyboard-shortcuts": "reviews.html#keyboard-shortcuts",
+                    "#/reviews?id=labels-and-participants-summary": "reviews.html#labels-and-participants-summary",
+                    "#/reviews?id=merge": "reviews.html#merge",
+                    "#/reviews?id=publish": "reviews.html#publish",
+                    "#/reviews?id=review-toolbar": "reviews.html#review-toolbar",
+                    "#/reviews?id=revisions": "reviews.html#revisions",
+                    "#/reviews?id=sync-requested-reviewers": "reviews.html#sync-requested-reviewers",
+                    "#/reviews?id=user-roles": "reviews.html#user-roles",
+                    "#/subscriptions": "subscriptions.html",
+                    "#/subscriptions?id=canceling-a-subscription": "subscriptions.html#canceling-a-subscription",
+                    "#/subscriptions?id=managing-the-scope-of-your-subscription": "subscriptions.html#managing-the-scope-of-your-subscription",
+                    "#/subscriptions?id=payments": "subscriptions.html#payments",
+                    "#/subscriptions?id=selecting-a-plan": "subscriptions.html#selecting-a-plan",
+                    "#/subscriptions?id=subscription-ownership": "subscriptions.html#subscription-ownership",
+                    "#/subscriptions?id=subscriptions": "subscriptions.html#subscriptions",
+                }
+                var redirect = hashMap[hash];
+                if (redirect) {
+                    window.location.replace(window.location.pathname + redirect);
+                }
+            }
+        </script>
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="registration.html"><strong aria-hidden="true">1.</strong> Registration and authorization</a></li><li class="chapter-item expanded "><a href="reviews.html"><strong aria-hidden="true">2.</strong> Code review</a></li><li class="chapter-item expanded "><a href="files.html"><strong aria-hidden="true">3.</strong> Code review files</a></li><li class="chapter-item expanded "><a href="discussions.html"><strong aria-hidden="true">4.</strong> Code review discussions</a></li><li class="chapter-item expanded "><a href="dashboard.html"><strong aria-hidden="true">5.</strong> Reviews dashboard</a></li><li class="chapter-item expanded "><a href="accountsettings.html"><strong aria-hidden="true">6.</strong> Account settings</a></li><li class="chapter-item expanded "><a href="repositories.html"><strong aria-hidden="true">7.</strong> Repositories</a></li><li class="chapter-item expanded "><a href="subscriptions.html"><strong aria-hidden="true">8.</strong> Subscriptions</a></li><li class="chapter-item expanded "><a href="abnormal.html"><strong aria-hidden="true">9.</strong> Abnormal conditions</a></li><li class="chapter-item expanded "><a href="tips.html" class="active"><strong aria-hidden="true">10.</strong> Tips and Tricks</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Reviewable User Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/Reviewable/Reviewable" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#tips-and-tricks" id="tips-and-tricks">Tips and Tricks</a></h1>
+<h2><a class="header" href="#videos" id="videos">Videos</a></h2>
+<p>We're trying out a new video format where an engineer goes through a real code review while we kibbitz and give them tips on using Reviewable:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=w3cgXBD7ErQ">Adam Storm from CockroachDB reviews some code</a></li>
+</ul>
+<p>There's a growing collection of <a href="https://www.youtube.com/channel/UCosLEhkOCx39oEPS9gaF0Gw/">tips in screencast format</a>, if that's what you prefer, including:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=JqFGBZa7YGg">What's the fastest way to check out your review code?</a></li>
+<li><a href="https://www.youtube.com/watch?v=xuJ2PGFprBE">Keyboard shortcuts for efficient reviews</a></li>
+<li><a href="https://www.youtube.com/watch?v=lg2tvhTTQNE">Customizing keyboard shortcuts</a></li>
+<li><a href="https://www.youtube.com/watch?v=mIwg3zRpSQE">Customizing code review completion conditions</a></li>
+</ul>
+<h2><a class="header" href="#articles" id="articles">Articles</a></h2>
+<p>Here are some articles and blog posts on code reviews that we found worth reading:</p>
+<ul>
+<li><a href="https://mtlynch.io/code-review-love/">How to Make Your Code Reviewer Fall in Love with You</a></li>
+</ul>
+<h2><a class="header" href="#visual-tweaks" id="visual-tweaks">Visual tweaks</a></h2>
+<p>Reviewable doesn't have a lot of settings exposed in the UI to customize how things look to keep things simple.  However, you can easily inject a <a href="accountsettings.html#custom-stylesheet">custom stylesheet</a> to override styling on a wide range of elements.  Here are some commonly requested examples.</p>
+<h3><a class="header" href="#line-numbers" id="line-numbers">Line numbers</a></h3>
+<p>Reviewable doesn't show line numbers in the diff for a number of reasons — there's a long discussion in <a href="https://github.com/Reviewable/Reviewable/issues/147">issue #147</a>.  The snippet below overrides this.  It's not perfect but it should work in the vast majority of cases:</p>
+<pre><code class="language-css">div[data-line-number]:not([data-line-number=&quot;0&quot;]):before {
+  content:attr(data-line-number);
+  position:absolute;
+  color: #444;
+  padding: 1px 3px 3px;
+  font-size: x-small;
+  display: block;
+  width: 20px;
+  text-align: right;
+}
+div[data-line-number]:not([data-line-number=&quot;0&quot;]) div.hljs {
+  margin-left: 26px;
+}
+</code></pre>
+<p>If you don't need to tweak these styles, just paste <code>https://gist.githack.com/pkaminski/4fd7c7b9014856de32bb43f84a396772/raw/line_numbers.css</code> into the custom stylesheet field.</p>
+<p><strong>Be careful</strong> though: by changing the layout in this way, Reviewable won't be able to automatically pick a diff width that fits your window so you'll need to <a href="files.html#diff-layout">control it manually</a>.</p>
+<h3><a class="header" href="#diff-line-background" id="diff-line-background">Diff line background</a></h3>
+<p>When in side-by-side diff mode, Reviewable doesn't highlight the whole line — just the deltas.  If you'd prefer the full line to also be highlighted like in unified diff mode you can use these styles:</p>
+<pre><code class="language-css">.two.column.diff .diff.line:not(.keep) .line.wrapper:not(.empty) .left.line.content {
+  background-color: #FBDDDD;  /* rgba(91, 220, 114, 0.20) on white */
+}
+.two.column.diff .diff.line.base:not(.keep) .line.wrapper:not(.empty) .left.line.content,
+.two.column.diff .diff.line.whitespace:not(.keep) .line.wrapper:not(.empty) .left.line.content {
+  background-color: #FFF7F7;  /* rgba(91, 220, 114, 0.05) on white */
+}
+
+.two.column.diff .diff.line:not(.keep) .line.wrapper:not(.empty) .right.line.content {
+  background-color: #DDF7E2;  /* rgba(91, 220, 114, 0.20) on white */
+}
+.two.column.diff .diff.line.base:not(.keep) .line.wrapper:not(.empty) .right.line.content,
+.two.column.diff .diff.line.whitespace:not(.keep) .line.wrapper:not(.empty) .right.line.content {
+  background-color: #EFFCF1;  /* rgba(91, 220, 114, 0.05) on white */
+}
+
+.two.column.diff .diff.line .left.line.content .delta {
+  background-color: rgba(240, 92, 92, 0.30);
+}
+.two.column.diff .diff.line.base .left.line.content .delta,
+.two.column.diff .diff.line.whitespace .left.line.content .delta {
+  background-color: rgba(240, 92, 92, 0.15);
+}
+
+.two.column.diff .diff.line .right.line.content .delta {
+  background-color: rgba(91, 220, 114, 0.30);
+}
+.two.column.diff .diff.line.base .right.line.content .delta,
+.two.column.diff .diff.line.whitespace .right.line.content .delta {
+  background-color: rgba(91, 220, 114, 0.15);
+}
+</code></pre>
+<p>Or just use this link:  <code>https://rawgit.com/pkaminski/2922da3d58f76a8ed7bf/raw/highlight_lines_in_two_columns.css</code>.</p>
+<h3><a class="header" href="#victory-bunny" id="victory-bunny">Victory bunny</a></h3>
+<p>Don't like the merge bunny?  Turn it off like this:</p>
+<pre><code class="language-css">.victory.decor {display: none}
+</code></pre>
+<h3><a class="header" href="#accessibility" id="accessibility">Accessibility</a></h3>
+<p>This snippet can be used to alter the diff colors for additions and removals, making them standout more. This may be helpful for those with Deuteranopia/Protanopia (green/red color blindness).</p>
+<pre><code class="language-css">:root {
+  --diff-add: 33, 150, 243;
+  --diff-remove: 255, 235, 59;
+}
+</code></pre>
+<div class="important">
+<p>The three values for each variable correspond to R,G and B color values and can be used to set the diffs to whatever colors you'd like. Do not add the <code>rgb()</code> wrapper around the values.</p>
+</div>
+<h3><a class="header" href="#removing-wavy-lines-on-collapsed-regions" id="removing-wavy-lines-on-collapsed-regions">Removing wavy lines on collapsed regions</a></h3>
+<p>Want to turn the wavy lines off to simplify how collapsed diff regions look? This snippet will do the trick:</p>
+<pre><code class="language-css">.review-page .file.root .file .wavy.edge {
+  background-image: none;
+}
+
+.review-page .file.root .file .top.wavy.edge {
+  margin-top: 1em;
+  margin-bottom: -0.5em;
+}
+
+.review-page .file.root .file .bottom.wavy.edge {
+  margin-bottom: 0.5em;
+}
+
+.review-page .file.root .file .declaration.include {
+  padding-top: 1em;
+}
+</code></pre>
+<p>You can also use this link: <code>https://rawcdn.githack.com/earlAchromatic/reviewable-custom-styles/6e35f21b6fa3d3978a4ae5f8ba0f23e2d5d6a475/no-wave.css</code></p>
+<h2><a class="header" href="#skipping-reviews-of-vendored-dependencies" id="skipping-reviews-of-vendored-dependencies">Skipping reviews of vendored dependencies</a></h2>
+<p>Depending on your package manager, you sometimes need to commit dependency source code into your repository but don't necessarily want to review updates to those hundreds or thousands of files every time you update.  Reviewable offers a few helpful features for this situation, from least to most invasive:</p>
+<ol>
+<li><a href="files.html#diff-suppression-and-file-type">Suppress diffs</a> for vendored files via <code>.gitattributes</code>.</li>
+<li>Use a custom review completion condition to <a href="repositories.html#files">group vendored files</a> in the file matrix, which will allow you to mark them all as reviewed with one click.</li>
+<li>Use a custom review completion condition to preemptively <a href="repositories.html#files">treat all such files as reviewed</a>.  This is the nuclear option and should work by itself, or you can combine it with the previous options for more flexibility.</li>
+</ol>
+<h2><a class="header" href="#ignore-comments-by-bots" id="ignore-comments-by-bots">Ignore comments by bots</a></h2>
+<p>When a user posts a comment (whether via Reviewable or GiHub), we automatically snapshot all revisions to ensure that the comment's context is preserved.  This can lead to a mess, though, if you're taking your time pushing commits to a PR before asking for a review and a bot (perhaps CI?) is posting comments as you go.  There can be dozens of snapshotted revisions by the time you invite a reviewer!</p>
+<p>To avoid this situation, Reviewable attempts to detect whether a comment was posted by a bot and avoids snapshotting revisions in that case.  We detect bots by checking whether the username ends with <code>[bot]</code> (for GitHub app bots) or <code>-bot</code>, or the display name ends with <code>(bot)</code>.  If you have a favorite bot account changing its username could be tricky, but it should be easy to append <code>(bot)</code> to its name since that oughtn't be referenced anywhere.</p>
+<h2><a class="header" href="#easy-local-revision-checkout" id="easy-local-revision-checkout">Easy local revision checkout</a></h2>
+<h3><a class="header" href="#tldr" id="tldr">TLDR</a></h3>
+<pre><code class="language-sh">git fetch origin refs/reviewable/pr756/r6
+git checkout FETCH_HEAD
+</code></pre>
+<h3><a class="header" href="#explanation" id="explanation">Explanation</a></h3>
+<p>Reviewable stores references to commits associated with each revision on Github.
+This has a handy side effect of making it easy to checkout a local copy of any revision from any Reviewable pull request.</p>
+<p>This can be done in two steps.</p>
+<ol>
+<li>Get a reference to the pull request or revision of interest.</li>
+<li>Checkout or make use of that reference.</li>
+</ol>
+<h4><a class="header" href="#1-get-the-revision-reference" id="1-get-the-revision-reference">1. Get the revision reference</a></h4>
+<p>If your prId were <code>756</code> and your desired revision were <code>6</code> as in the image above, you would store revision reference in <code>.git/FETCH_HEAD</code> constant using</p>
+<pre><code class="language-sh">git fetch origin refs/reviewable/pr756/r6
+</code></pre>
+<p>Note that the form of the reviewable reference titles as shown above is <code>refs/reviewable/pr${prId}/r${revisionId}</code> .</p>
+<p>The ids <code>prId</code> and <code>revisionId</code> are available by inspection on the reviewable.io. review page:</p>
+<p><img src="images/tips_1_prId.png" alt="crop from review page showing prId of 756 and revisionId of 6" /></p>
+<div class="tip">
+<p>You can also just explore the references using the git client, by typing a reference name partially, as in <code>git fetch origin refs/reviewable/</code>, and then use tab completion to get your options.</p>
+</div>
+<h4><a class="header" href="#2-use-the-revision-reference" id="2-use-the-revision-reference">2. Use the revision reference</a></h4>
+<p>After saving the FETCH_HEAD reference as described above, you can use it as you see fit.</p>
+<p>For example check out the revision code using</p>
+<pre><code class="language-sh">git checkout FETCH_HEAD
+</code></pre>
+<p>or glance at the log using</p>
+<pre><code class="language-sh">git log -n 1 --oneline FETCH_HEAD
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="abnormal.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="abnormal.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
+
